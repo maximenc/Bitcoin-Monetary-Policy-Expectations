@@ -205,3 +205,20 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+data/All_Data_Weekly_transformed.csv
+data/raw/.DS_Store
+data/raw/Bloomberg.csv
+data/raw/WEI.csv
+figures/.DS_Store
+data/stocktwits/output_FED.xlsx
+data/stocktwits/output_MACRO.xlsx
+data/stocktwits/output.xlsx
+data/stocktwits/FED_class.csv
+data/stocktwits/MACRO_class.csv
+data/raw/GPRD.csv
+data/raw/Effective Exchange Rate.csv
+data/raw/US_SF_News_Sentiment.csv
+data/raw/US Policy Risk Index.csv
+data/raw/All_Infectious_EMV_Data.csv
+.DS_Store
