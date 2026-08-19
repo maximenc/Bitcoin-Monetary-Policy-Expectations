@@ -11,7 +11,7 @@ This repository contains the Jupyter notebooks required to replicate all figures
 | # | Notebook | Purpose |
 |---|----------|---------|
 | 1 | `01_MPE_Scrape_Stocktwits.ipynb` | Scrapes StockTwits messages tagged `$FED` and `$MACRO` (2014–2025) to build the raw corpus used to construct the Monetary Policy Expectations (MPE) index |
-| 2 | `02_MPE_Classifier_Mistral.ipynb` | Classifies messages into five sentiment categories (Very Hawkish to Very Dovish) using a Mistral-7B LLM; constructs the daily MPE index — reproduces Tables 1–2 |
+| 2 | `02_MPE_Classifier_Mistral_Qwen.ipynb` | Classifies messages into five sentiment categories (Very Hawkish to Very Dovish) using Qwen2.5-7B and Mistral-Nemo LLMs; constructs the daily MPE index — reproduces Tables 1–2 |
 | 3 | `03_MPE_Analysis.ipynb` | Analyzes the MPE index: plots Bitcoin prices, MPE, and the Federal Funds Rate; computes return distributions by monetary regime — reproduces Figure 1, Figure 3, and Table 5 |
 | 4 | `04_Google_Trends_Variables.ipynb` | Downloads Google Trends series (inflation, recession, climate change) via `pytrends` for use as control variables |
 | 5 | `05_Data_Transform_Stationary.ipynb` | Harmonizes all series to a common frequency, applies stationarity transformations (log returns, first differences) as described in Table 11 |
@@ -22,6 +22,8 @@ This repository contains the Jupyter notebooks required to replicate all figures
 | 10 | `10_ARIMA_GARCH.ipynb` | Fits ARIMA and GARCH models as baseline forecasters; reports RMSE and MAE benchmarks — reproduces baseline results in Table 8 |
 | 11 | `11_LSTM.ipynb` | Trains an LSTM model with walk-forward validation and Optuna hyperparameter optimization; evaluates forecasting performance — reproduces Table 8, Figure 4, and Table 13 |
 | 12 | `12_SHAP_Analysis.ipynb` | Computes SHAP values for LSTM predictions to interpret the contribution of each variable — reproduces Figures 5–9 and Tables 9–10 |
+
+The `additional-mpe-tests/` folder contains executed robustness notebooks that re-run the LSTM and SHAP analyses on alternative MPE index variants (Mistral-Nemo and Qwen2.5-7B, with alternative aggregation and smoothing choices).
 
 ---
 
@@ -39,4 +41,4 @@ A GPU is recommended for notebooks 11 and 12 (LSTM training and SHAP analysis).
 
 ## Usage
 
-Run the notebooks in order. StockTwits data (notebook 1) and Google Trends data (notebook 4) are collected automatically via their respective APIs. Notebook 2 requires a local Mistral-7B model served via [Ollama](https://ollama.com/).
+Run the notebooks in order. StockTwits data (notebook 1) and Google Trends data (notebook 4) are collected automatically via their respective APIs. Notebook 2 requires local Qwen2.5-7B and Mistral-Nemo models served via [Ollama](https://ollama.com/).

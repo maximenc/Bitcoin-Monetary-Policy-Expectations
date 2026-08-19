@@ -222,3 +222,11 @@ data/raw/US_SF_News_Sentiment.csv
 data/raw/US Policy Risk Index.csv
 data/raw/All_Infectious_EMV_Data.csv
 .DS_Store
+additional-mpe-tests/data/All_Data_Weekly_mistral2.csv
+additional-mpe-tests/data/All_Data_Weekly_mistral3.csv
+additional-mpe-tests/data/All_Data_Weekly_qwen2.csv
+additional-mpe-tests/data/All_Data_Weekly_qwen3.csv
+data/market_expectations_weekly.csv
+data/validation_qwen_nemo/nemo_A_full.csv
+data/validation_qwen_nemo/nemo_A_key.csv
+/data/validation_qwen_nemo
